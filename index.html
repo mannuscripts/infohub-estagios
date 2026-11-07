@@ -4,10 +4,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Personalize o título e a descrição com o nome do seu setor -->
-  <title>[Nome do Setor] — InfoHub UEMG Carangola</title>
+  <title>Estágios &amp; Convênios — InfoHub UEMG Carangola</title>
   <meta name="description"
-    content="Portal Informativo do [Nome do Setor] da UEMG Unidade Carangola. Normativas, fluxos oficiais e autoatendimento acadêmico." />
+    content="Orientações oficiais sobre estágio obrigatório e não obrigatório, termos de compromisso, convênios, prazos e relatórios de atividades." />
   <meta name="theme-color" content="#003366" />
 
   <!-- Favicon e Folhas de Estilo -->
@@ -56,18 +55,13 @@
          ======================================================================= -->
   <section class="hero-section" aria-labelledby="hero-heading">
     <div class="container hero-content">
-      <!-- Substitua pelo número e categoria do seu setor -->
-      <div class="hero-badge">Setor 01 • [Categoria do Setor]</div>
+      <div class="hero-badge">Setor 03 • Estágios</div>
 
-      <!-- Substitua pelo nome oficial do setor -->
-      <h1 id="hero-heading" class="hero-title">
-        [Nome Completo do Setor Institucional]
-      </h1>
+      <h1 id="hero-heading" class="hero-title">Estágios &amp; Convênios</h1>
 
-      <!-- Substitua pela síntese do objetivo deste portal setorial -->
       <p class="hero-lead">
-        Guia de autoatendimento, fluxos de processos, normativas vigentes e esclarecimento de dúvidas frequentes da
-        comunidade acadêmica da UEMG Carangola.
+        Orientações para planejar, formalizar e concluir seu estágio com segurança, documentação correta e acesso às
+        fontes oficiais da UEMG.
       </p>
 
       <!-- Indicadores rápidos do setor (personalize os textos abaixo se desejar) -->
@@ -78,7 +72,7 @@
             <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
             <polyline points="22 4 12 14.01 9 11.01"></polyline>
           </svg>
-          <span>Fluxos Homologados</span>
+          <span>Orientações práticas</span>
         </div>
         <div class="hero-stat-item">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -88,14 +82,14 @@
             <line x1="8" y1="2" x2="8" y2="6"></line>
             <line x1="3" y1="10" x2="21" y2="10"></line>
           </svg>
-          <span>Calendário Atualizado</span>
+          <span>Documentos oficiais</span>
         </div>
         <div class="hero-stat-item">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
           </svg>
-          <span>Canais Oficiais UEMG</span>
+          <span>Canais da UEMG</span>
         </div>
       </div>
     </div>
@@ -109,57 +103,509 @@
   <main id="main-content" role="main" class="setor-main-section">
     <div class="container">
 
-      <!-- Cabeçalho de Introdução do Setor -->
+      <!-- Cabeçalho da Seção Principal -->
       <header class="setor-section-header">
-        <p class="setor-section-subtitle">Autoatendimento & Informações</p>
-        <h2 class="setor-section-title">Serviços e Orientações do Setor</h2>
+        <p class="setor-section-subtitle">Autoatendimento & Guia Oficial de Estágios</p>
+        <h2 class="setor-section-title">Orientações Oficiais e Tramitação de Estágios UEMG Carangola</h2>
         <p class="setor-section-desc">
-          Selecione o procedimento desejado abaixo para consultar os requisitos, documentação necessária e prazos
-          regulamentares.
+          Consulte o passo a passo, regulamentos, prazos e os canais oficiais para formalizar seu estágio. Conteúdo totalmente alinhado com as orientações da coordenação docente, normativas da UEMG e a Lei Federal nº 11.788/2008.
         </p>
       </header>
 
-      <!-- Exemplo de Grid de Cards (Substitua ou expanda conforme a modelagem do grupo) -->
-      <div class="setor-cards-grid">
+      <!-- Campo de Busca Dinâmica e Filtros por Categoria -->
+      <div class="setor-search" role="search">
+        <label for="setor-search-input">Buscar informações, normas e dúvidas de estágio</label>
+        <div class="setor-search-control">
+          <input id="setor-search-input" type="search" placeholder="Ex.: TCE, seguro de vida, bolsa, relatório, licenciatura, prazo..." autocomplete="off" />
+          <button type="button" id="setor-search-clear" class="setor-button setor-button-secondary" aria-label="Limpar busca e filtros">Limpar</button>
+        </div>
+        
+        <!-- Tags de Filtro Rápido (Melhoria Sugerida pela Equipe Dev) -->
+        <div class="setor-filter-tags" aria-label="Filtrar por categoria">
+          <button type="button" class="setor-filter-tag is-active" data-filter="all">Todas as Informações</button>
+          <button type="button" class="setor-filter-tag" data-filter="tramitacao">Tramitação & TCE</button>
+          <button type="button" class="setor-filter-tag" data-filter="modalidades">Modalidades & Tipos</button>
+          <button type="button" class="setor-filter-tag" data-filter="prazos">Prazos & Prazos</button>
+          <button type="button" class="setor-filter-tag" data-filter="documentos">Documentos & Seguro</button>
+          <button type="button" class="setor-filter-tag" data-filter="ferramentas">Ferramentas & Checklist</button>
+          <button type="button" class="setor-filter-tag" data-filter="contatos">Contatos UEMG</button>
+        </div>
 
-        <!-- Card de Exemplo 1: Processos e Fluxos -->
-        <article class="setor-card">
-          <h3>📋 Como Solicitar Atendimento</h3>
-          <p>
-            Descreva aqui o passo a passo que o discente ou docente deve seguir para abrir uma solicitação junto ao
-            setor, formulários necessários e prazos médios de resposta.
-          </p>
-        </article>
-
-        <!-- Card de Exemplo 2: Normativas e Regulamentos -->
-        <article class="setor-card">
-          <h3>📑 Regulamentos e Portarias</h3>
-          <p>
-            Links diretos para editais, resoluções do COEPE e manuais oficiais que fundamentam as regras deste setor
-            acadêmico.
-          </p>
-        </article>
-
-        <!-- Card de Exemplo 3: Contatos e Horários -->
-        <article class="setor-card">
-          <h3>⏰ Horários e Equipe Responsável</h3>
-          <p>
-            Informações sobre coordenação, e-mails institucionais oficiais (@uemg.br) e plantões presenciais na Unidade
-            Carangola.
-          </p>
-        </article>
-
+        <p id="setor-search-status" class="setor-search-status" aria-live="polite"></p>
       </div>
 
-      <!-- Box de Destaque / Importante -->
+      <!-- =======================================================================
+           BLOCO 1: TRAMITAÇÃO E O QUE É O TCE 
+           ======================================================================= -->
+      <section class="setor-panel setor-searchable" data-category="tramitacao" data-search="termo compromisso tce tramitação ministério trabalho fiscalização carteira assinada professor orientador coordenação seguro vida">
+        <div class="setor-section-header setor-section-header-compact">
+          <p class="setor-section-subtitle">Regulamentação e Início das Atividades</p>
+          <h2 class="setor-section-title">01 • O Termo de Compromisso de Estágio (TCE) & Tramitação</h2>
+        </div>
+
+        <div class="setor-cards-grid three-cols">
+          <!-- Card 1.1 -->
+          <article class="setor-card">
+            <p class="setor-card-kicker">Exigência Legal Absoluta</p>
+            <h3>O que é o TCE e sua importância</h3>
+            <p>
+              O <strong>Termo de Compromisso de Estágio (TCE)</strong> é o documento legal obrigatório que estabelece a condição formal de estagiário para o estudante.
+            </p>
+            <p style="margin-top: 8px;">
+              Nenhum estágio pode ter início ou ser realizado sem o TCE devidamente preenchido e assinado por todas as partes.
+            </p>
+            <p style="margin-top: 8px;">
+              O documento formaliza a relação entre estudante, concedente e universidade.
+            </p>
+          </article>
+
+          <!-- Card 1.2 -->
+          <article class="setor-card">
+            <p class="setor-card-kicker">Fluxo de Atendimento</p>
+            <h3>Tramitação Correta no Curso</h3>
+            <p>
+              A tramitação do TCE <strong>NÃO é realizada via e-mails</strong> ou formulários externos genéricos.
+            </p>
+            <p style="margin-top: 8px;">
+              O procedimento deve ser feito a partir do contato direto do estudante com:
+            </p>
+            <ol class="setor-steps">
+              <li><strong>Docente responsável</strong> pela disciplina de estágio do seu curso; ou</li>
+              <li><strong>Coordenação do curso</strong> correspondente.</li>
+            </ol>
+          </article>
+
+          <!-- Card 1.3 -->
+          <article class="setor-card">
+            <p class="setor-card-kicker">Seguro Obrigatório Anual</p>
+            <h3>Alerta sobre Modelo de TCE Atualizado</h3>
+            <p>
+              Todo ano o modelo do TCE é <strong>obrigatoriamente atualizado</strong> porque a apólice do <strong>Seguro de Vida Obrigatório</strong> do estagiário é renovada anualmente pela UEMG.
+            </p>
+            <p style="margin-top: 8px; font-size: var(--font-size-xs); color: var(--color-accent-amber); font-weight: 700;">
+            </p>
+            <p style="font-size: var(--font-size-xs); color: var(--color-text-muted);">
+              Obtenha o documento vigente com o professor orientador ou a coordenação do curso. No curso de <strong>Sistemas de Informação</strong>, utilize o <a class="setor-link" href="https://sge-sistemas.vercel.app/" target="_blank" rel="noopener noreferrer">Sistema de Gestão de Estágios (SGE) ↗</a>.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- =======================================================================
+           BLOCO 2: MODALIDADES E TIPOS DE ESTÁGIO 
+           ======================================================================= -->
+      <section class="setor-panel setor-searchable" data-category="modalidades" data-search="bacharelado licenciatura obrigatório não obrigatório bolsa auxilio remuneração ppc escolas conveniadas créditos">
+        <div class="setor-section-header setor-section-header-compact">
+          <p class="setor-section-subtitle">Estrutura Curricular & Remuneração</p>
+          <h2 class="setor-section-title">02 • Modalidades e Tipos de Estágio</h2>
+        </div>
+
+        <div class="setor-cards-grid">
+          <!-- Bacharelado vs Licenciatura -->
+          <article class="setor-card">
+            <p class="setor-card-kicker">Diferença Curricular de Modalidade</p>
+            <h3>Bacharelado vs. Licenciatura</h3>
+            <p>
+              Existem particularidades marcantes entre as modalidades de ensino da UEMG Carangola:
+            </p>
+            <ul class="setor-steps" style="list-style-type: disc;">
+              <li>
+                <strong>Bacharelados (Ex: Sistemas de Informação, Administração, Serviço Social):</strong> O estágio obrigatório ocorre nos últimos períodos (ex: Sistemas de Informação tem Estágio I no 7º período e Estágio II no 8º período), em ambiente compatível com a atuação do curso.
+              </li>
+              <li>
+                <strong>Licenciaturas:</strong> O estágio inicia logo no 1º ano / 1º semestre e deve ser realizado exclusivamente em escolas conveniadas com a UEMG.
+              </li>
+            </ul>
+          </article>
+
+          <!-- Obrigatório vs Não Obrigatório -->
+          <article class="setor-card">
+            <p class="setor-card-kicker">Créditos e Bolsa-Auxílio</p>
+            <h3>Estágio Obrigatório vs. Não Obrigatório</h3>
+            <p>
+              Entenda os dois tipos de estágio praticados:
+            </p>
+            <ul class="setor-steps" style="list-style-type: disc;">
+              <li>
+                <strong>Estágio Obrigatório:</strong> É disciplina curricular indispensável para a graduação. Conta créditos acadêmicos e segue rigorosamente o PPC (Projeto Pedagógico do Curso). Pode ou não ser remunerado.
+              </li>
+              <li>
+                <strong>Estágio Não Obrigatório:</strong> É uma atividade que <strong> NÃO </strong> gera créditos diretos na disciplina. <strong>É OBRIGATORIAMENTE REMUNERADO (Bolsa-Auxílio)</strong>. O valor da bolsa é acordado entre a empresa/concedente e o aluno. Pode ser feito a qualquer momento do curso, desde que formalizado por TCE e aprovado pelo curso.
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- =======================================================================
+           BLOCO 3: PRAZOS, CALENDÁRIO E ALERTAS PREVENTIVOS 
+           ======================================================================= -->
+      <section class="setor-panel setor-searchable" data-category="prazos" data-search="prazos calendário carga horária alertas preventivos relatórios plano atividades atraso perda estágio antecipação campo">
+        <div class="setor-section-header setor-section-header-compact">
+          <p class="setor-section-subtitle">Gestão do Tempo e Cuidados Fundamentais</p>
+          <h2 class="setor-section-title">03 • Prazos, Carga Horária e Alertas Preventivos</h2>
+        </div>
+
+        <div class="setor-cards-grid">
+          <!-- Card 3.1: Prazo e Carga Horária -->
+          <article class="setor-card">
+            <p class="setor-card-kicker">Tempo Hábil por Curso</p>
+            <h3>Prazo e Calendário de Execução</h3>
+            <p>
+              O prazo de estágio não é uma data única fixa para toda a universidade, mas sim o <strong>tempo hábil necessário</strong> para cumprir a carga horária estabelecida pela matriz curricular do seu curso.
+            </p>
+            <div class="setor-card-alert" style="background-color: #f0f9ff; border-left-color: var(--color-primary-light); color: var(--color-primary-dark); font-size: var(--font-size-sm); line-height: 1.6;">
+              <strong>Exemplos de carga horária:</strong>
+              <ul class="setor-steps">
+                <li>Sistemas de Informação: 180 horas.</li>
+                <li>Cursos de Licenciatura: 400 horas.</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Card 3.2: Alertas Preventivos -->
+          <article class="setor-card">
+            <p class="setor-card-kicker">Prevenção de Problemas</p>
+            <h3>Alertas Cruciais aos Discentes</h3>
+            <p>
+              São destacadas duas atitudes fundamentais para o sucesso do estudante:
+            </p>
+            <ol class="setor-steps">
+              <li>
+                <strong>Antecipe a busca pelo Campo de Estágio:</strong> Nos bacharelados, cabe ao aluno encontrar a concedente. Não deixe para procurar no último momento do semestre!
+              </li>
+              <li>
+                <strong>NUNCA perca os prazos de entrega dos documentos:</strong> Iniciado o estágio, correm os prazos rigorosos para entrega do Plano de Atividades, Relatórios Parciais e Relatório Final. Perder os prazos significa perder o estágio!
+              </li>
+            </ol>
+
+          </article>
+        </div>
+      </section>
+
+      <!-- =======================================================================
+           BLOCO 4: FERRAMENTAS INTERATIVAS & CHECKLIST (MELHORIA SUGERIDA PELA EQUIPE DEV)
+           ======================================================================= -->
+      <section class="setor-panel setor-searchable" data-category="ferramentas" data-search="ferramentas simulador calculadora horas dias semanas checklist progresso estagiário desenvolvimento equipe">
+        <div class="setor-section-header setor-section-header-compact">
+          <p class="setor-section-subtitle">Recurso Interativo para o Aluno</p>
+          <h2 class="setor-section-title">04 • Checklist do Estagiário</h2>
+        
+        </div>
+
+          <!-- Checklist do Estagiário -->
+          <div class="setor-tool-box">
+            <h3>Exemplo de um checklist de progresso do estágiario</h3>
+            <p class="tool-desc">
+              É recomendável que cada estagiário acompanhe o seu fluxo do início ao fim, por exemplo, estas são algumas etapas que podem existir em uma disciplina de estágio. Marque as etapas para verificar o seu progresso.
+            </p>
+
+            <div class="checklist-list">
+              <label class="checklist-item" for="check-1">
+                <input type="checkbox" id="check-1" />
+                <span>1. Consultei o PPC e verifiquei a carga horária e requisitos do meu curso.</span>
+              </label>
+
+              <label class="checklist-item" for="check-2">
+                <input type="checkbox" id="check-2" />
+                <span>2. Entrei em contato com o Docente Responsável pelo Estágio / Coordenação do Curso.</span>
+              </label>
+
+              <label class="checklist-item" for="check-3">
+                <input type="checkbox" id="check-3" />
+                <span>3. Solicitei a versão ATUALIZADA do Termo de Compromisso (TCE) do ano vigente.</span>
+              </label>
+
+              <label class="checklist-item" for="check-4">
+                <input type="checkbox" id="check-4" />
+                <span>4. Validei o seguro de vida e a concessão de bolsa-auxílio (se não obrigatório).</span>
+              </label>
+
+              <label class="checklist-item" for="check-5">
+                <input type="checkbox" id="check-5" />
+                <span>5. Coletei todas as assinaturas (Estudante, Empresa/Escola e UEMG) ANTES de iniciar.</span>
+              </label>
+
+              <label class="checklist-item" for="check-6">
+                <input type="checkbox" id="check-6" />
+                <span>6. Protocolou o Plano de Atividades dentro do prazo estabelecido.</span>
+              </label>
+
+              <label class="checklist-item" for="check-7">
+                <input type="checkbox" id="check-7" />
+                <span>7. Enviei os relatórios parciais e o Relatório Final para validação e nota.</span>
+              </label>
+            </div>
+
+            <div class="checklist-progress-bar">
+              <div id="checklist-progress-fill" class="checklist-progress-fill"></div>
+            </div>
+            <p id="checklist-count-text" style="font-size: var(--font-size-xs); color: var(--color-text-muted); font-weight: 700; margin-top: 6px; text-align: right;">
+              0 de 7 etapas concluídas (0%)
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- =======================================================================
+           BLOCO 5: FONTES DE CONSULTA E DOCUMENTOS
+           ======================================================================= -->
+      <section class="setor-panel setor-searchable" data-category="documentos" data-search="fontes consulta documentos sistema sge sistemas informação lei federal 11788 prograd seguro vigência modelo formulários">
+        <div class="setor-section-header setor-section-header-compact">
+          <p class="setor-section-subtitle">Acesso a Documentos Oficiais</p>
+          <h2 class="setor-section-title">05 • Onde Obter a Documentação Atualizada</h2>
+        </div>
+
+        <div class="setor-resource-grid">
+          <div class="setor-resource-card">
+            <strong>📄 TCE Modelo Oficial Atualizado</strong>
+            <span>Deve ser solicitado diretamente ao docente responsável pela disciplina de estágio ou à coordenação do seu curso. O modelo é alterado anualmente em razão da apólice do seguro de vida.</span>
+          </div>
+
+          <a class="setor-resource-card" href="https://sge-sistemas.vercel.app/" target="_blank" rel="noopener noreferrer">
+            <strong>💻 Sistema de Gestão de Estágios (SGE - Sistemas de Informação) ↗</strong>
+            <span>Portal exclusivo para discentes de Sistemas de Informação para cadastro, emissão e controle da documentação de estágio e consulta a modelos.</span>
+          </a>
+
+          <a class="setor-resource-card" href="https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2008/lei/l11788.htm" target="_blank" rel="noopener noreferrer">
+            <strong>⚖️ Lei Federal de Estágio (Nº 11.788/2008) ↗</strong>
+            <span>Legislação nacional que estabelece os direitos, deveres, limites de jornada, bolsa e seguro para estudantes estagiários em todo o Brasil.</span>
+          </a>
+
+          <a class="setor-resource-card" href="https://www.uemg.br/ensino-carangola/coordenacoes-dos-cursos" target="_blank" rel="noopener noreferrer">
+            <strong>🎓 Portal das Coordenações de Cursos UEMG ↗</strong>
+            <span>Lista e contatos das coordenações de todos os cursos da UEMG Unidade Carangola.</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- =======================================================================
+           BLOCO 6: PERGUNTAS FREQUENTES
+           ======================================================================= -->
+      <section class="setor-faq-section setor-searchable" data-category="prazos" aria-labelledby="faq-title">
+        <div class="setor-section-header setor-section-header-compact">
+          <p class="setor-section-subtitle">Dúvidas Frequentes Respondidas</p>
+          <h2 id="faq-title" class="setor-section-title">06 • Perguntas Frequentes (FAQ)</h2>
+        </div>
+
+        <div class="setor-faq-list">
+          <!-- FAQ 1 -->
+          <details class="setor-faq-item setor-searchable" data-search="termo compromisso tce o que é ministério trabalho obrigatoriedade carteira assinada">
+            <summary>O que é o Termo de Compromisso de Estágio (TCE) e por que ele é obrigatório?</summary>
+            <p>
+              O TCE é o documento legal que regula a atuação do estudante no ambiente de trabalho. Nenhum estágio existe ou pode ser realizado sem o TCE devidamente assinado. Segundo fiscalização do Ministério do Trabalho, caso um estudante seja encontrado estagiando sem o TCE, a concedente (empresa ou escola) será obrigada a assinar sua carteira de trabalho (CLT).
+            </p>
+          </details>
+
+          <!-- FAQ 2 -->
+          <details class="setor-faq-item setor-searchable" data-search="tramitação onde entregar secretaria e-mail professor coordenação">
+            <summary>Como faço a tramitação do meu TCE? Devo enviar para o e-mail da Secretaria Acadêmica?</summary>
+            <p>
+              Não! A tramitação <strong>não é feita por e-mails</strong>. O procedimento deve ser realizado diretamente em contato com o docente responsável pela disciplina de estágio no seu curso ou com a coordenação do seu curso.
+            </p>
+          </details>
+
+          <!-- FAQ 3 -->
+          <details class="setor-faq-item setor-searchable" data-search="qual prazo calendário início entrega relatórios carga horária bsi licenciatura">
+            <summary>Existe um prazo único para realizar o estágio?</summary>
+            <p>
+              Não. O prazo é relativo à carga horária de cada curso e representa o tempo hábil necessário para o cumprimento das horas (por exemplo, 180 horas em Bacharelado em Sistemas de Informação versus 400 horas nas Licenciaturas). Confirme o calendário com o professor orientador ou a coordenação.
+            </p>
+          </details>
+
+          <!-- FAQ 4 -->
+          <details class="setor-faq-item setor-searchable" data-search="diferença bacharelado licenciatura início período escola conveniada">
+            <summary>Qual a diferença de estágio entre Bacharelado e Licenciatura?</summary>
+            <p>
+              No <strong>Bacharelado</strong> (ex: Sistemas de Informação, Administração, Serviço Social), o estágio obrigatório ocorre nos últimos períodos do curso (ex: 7º e 8º períodos do Sistemas de Informação), em ambiente profissional compatível. Na <strong>Licenciatura</strong>, o estágio começa logo no 1º semestre e deve ser cumprido em escolas conveniadas com a universidade.
+            </p>
+          </details>
+
+          <!-- FAQ 5 -->
+          <details class="setor-faq-item setor-searchable" data-search="estágio não obrigatório remuneração bolsa auxilio de graça valor acordo">
+            <summary>Posso fazer um estágio não obrigatório sem receber bolsa-auxílio?</summary>
+            <p>
+              <strong>Não!</strong> Não existe estágio não obrigatório gratuito. O estudante obrigatoriamente deve receber remuneração (bolsa-auxílio). O valor da bolsa é acordado entre a concedente e o estudante.
+            </p>
+          </details>
+
+          <!-- FAQ 6 -->
+          <details class="setor-faq-item setor-searchable" data-search="quando posso fazer estágio não obrigatório primeiro período flexibilidade">
+            <summary>Em qual período posso iniciar um estágio não obrigatório?</summary>
+            <p>
+              No bacharelado, o estágio não obrigatório pode ser iniciado a qualquer momento do curso (inclusive no 1º período), desde que seja formalizado via TCE, tenha seguro e seja aprovado pela coordenação para não atrapalhar o desempenho acadêmico.
+            </p>
+          </details>
+
+          <!-- FAQ 7 -->
+          <details class="setor-faq-item setor-searchable" data-search="alertas cuidados atraso relatórios datas entrega perda estágio">
+            <summary>Quais são os principais alertas preventivos para não perder o estágio?</summary>
+            <p>
+              Primeiro: antecipe a busca pelo local de estágio (nos bacharelados é de responsabilidade do aluno). Segundo: cumpra rigorosamente os prazos de entrega do Plano de Atividades e dos relatórios. Perder prazos pode invalidar ou cancelar o seu estágio!
+            </p>
+          </details>
+
+          <!-- FAQ 8 -->
+          <details class="setor-faq-item setor-searchable" data-search="por que termo muda todo ano seguro de vida apólice renovação uemg">
+            <summary>Por que não devo baixar modelos antigos de TCE na internet?</summary>
+            <p>
+              Porque a UEMG renova anualmente a apólice do <strong>Seguro de Vida Obrigatório</strong> para estagiários. Como essa cláusula é atualizada todos os anos no documento, utilizar termos antigos invalida o processo. Solicite sempre a versão do ano vigente ao professor orientador ou coordenação.
+            </p>
+          </details>
+        </div>
+      </section>
+
+      <!-- =======================================================================
+           BLOCO 7: CANAIS OFICIAIS DE CONTATO UEMG CARANGOLA (Com Links Solicitados)
+           ======================================================================= -->
+      <section class="setor-contact-card setor-searchable" data-category="contatos" data-search="contato endereço telefone whatsapp secretaria coordenação instagram carangola praça estudantes">
+        <div class="setor-section-header setor-section-header-compact" style="margin-bottom: 0;">
+          <p class="setor-section-subtitle" style="color: #fbbf24;">Canais Oficiais e Atendimento Presencial</p>
+          <h2 class="setor-section-title" style="color: #ffffff;">07 • Fale com a UEMG Unidade Carangola</h2>
+          <p style="color: #cbd5e1; font-size: var(--font-size-sm); margin-top: 4px;">
+            Entre em contato direto com a unidade para dúvidas sobre estágios, documentos ou assuntos acadêmicos.
+          </p>
+        </div>
+
+        <div class="setor-contact-grid">
+          <!-- Endereço -->
+          <div class="setor-contact-item">
+            <div class="setor-contact-icon" aria-hidden="true">📍</div>
+            <div class="setor-contact-info">
+              <h4>Endereço Institucional</h4>
+              <p>Praça dos Estudantes, nº 23, Bairro Santa Emília<br />CEP 36800-000 • Carangola / MG</p>
+            </div>
+          </div>
+
+          <!-- Telefone / WhatsApp Geral -->
+          <div class="setor-contact-item">
+            <div class="setor-contact-icon" aria-hidden="true">📞</div>
+            <div class="setor-contact-info">
+              <h4>Telefone / WhatsApp Geral</h4>
+              <p><a href="tel:3237412307">(32) 3741-2307</a></p>
+            </div>
+          </div>
+
+          <!-- Secretaria Acadêmica -->
+          <div class="setor-contact-item">
+            <div class="setor-contact-icon" aria-hidden="true">🏛️</div>
+            <div class="setor-contact-info">
+              <h4>Secretaria Acadêmica</h4>
+              <p><a href="tel:3237417524">(32) 3741-7524</a></p>
+            </div>
+          </div>
+
+          <!-- Coordenação de Cursos -->
+          <div class="setor-contact-item">
+            <div class="setor-contact-icon" aria-hidden="true">👨‍🏫</div>
+            <div class="setor-contact-info">
+              <h4>Coordenação de Cursos</h4>
+              <p><a href="tel:3237417399">(32) 3741-7399</a></p>
+            </div>
+          </div>
+
+          <!-- Instagram Oficial -->
+          <div class="setor-contact-item">
+            <div class="setor-contact-icon" aria-hidden="true">📸</div>
+            <div class="setor-contact-info">
+              <h4>Instagram Oficial</h4>
+              <p><a href="https://instagram.com/uemg.carangola" target="_blank" rel="noopener noreferrer">@uemg.carangola ↗</a></p>
+            </div>
+          </div>
+
+          <!-- Links Institucionais Úteis -->
+          <div class="setor-contact-item">
+            <div class="setor-contact-icon" aria-hidden="true">🔗</div>
+            <div class="setor-contact-info">
+              <h4>Links Úteis Oficiais</h4>
+              <p style="display: flex; flex-direction: column; gap: 4px; margin-top: 2px;">
+                <a href="https://www.uemg.br/carangola-institucional/telefones-uteis" target="_blank" rel="noopener noreferrer">Telefones Úteis da Unidade ↗</a>
+                <a href="https://www.uemg.br/ensino-carangola/coordenacoes-dos-cursos" target="_blank" rel="noopener noreferrer">Coordenações dos Cursos ↗</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Mensagem Final de Recomendação do Professor -->
       <div class="setor-callout" role="note">
-        <h4>💡 Atenção aos Prazos do Calendário Acadêmico</h4>
+        <div class="setor-callout-quote">
+          "O estágio é o primeiro degrau da sua carreira profissional."
+        </div>
         <p>
-          Lembre-se de conferir as datas-limite no calendário oficial da UEMG antes de submeter sua documentação.
+          Planeje sua documentação com antecedência, consulte sempre o docente responsável pela disciplina de estágio ou a coordenação do seu curso e mantenha seus relatórios em dia.
         </p>
       </div>
 
-      <!-- FIM DO CONTEÚDO EXEMPLIFICATIVO DO GRUPO -->
+      <section class="setor-team-section" aria-labelledby="team-title">
+        <div class="setor-section-header setor-section-header-compact">
+          <p class="setor-team-eyebrow">EQUIPE DE DESENVOLVIMENTO</p>
+          <h2 id="team-title" class="setor-section-title">Desenvolvido por</h2>
+          <span class="setor-team-rule" aria-hidden="true"></span>
+          <p class="setor-section-desc">
+            Estudantes de Sistemas de Informação responsáveis pelo desenvolvimento desta página.
+          </p>
+        </div>
+
+        <div class="setor-team-grid">
+          <article class="setor-team-card">
+            <span class="setor-team-number">01</span>
+            <img class="setor-team-photo" src="./images/emannuely-vanuzia.jpg" alt="Foto de Emannuely Vanuzia" width="96" height="96" />
+            <div class="setor-team-content">
+              <h3>Emannuely Vanuzia</h3>
+              <p class="setor-team-role">Integrante do grupo</p>
+              <p class="membro-desc">Graduando em Sistemas de Informação, UEMG Unidade Carangola.</p>
+              <p class="setor-team-location">
+                <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 21s7-6.1 7-12a7 7 0 1 0-14 0c0 5.9 7 12 7 12Z"></path><circle cx="12" cy="9" r="2.25"></circle></svg>
+                Porciúncula/RJ
+              </p>
+              <div class="setor-team-divider" aria-hidden="true"></div>
+              <div class="setor-team-links">
+                <a href="https://www.linkedin.com/in/emannuely-vanuzia/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Emannuely Vanuzia"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6 8.5V18M6 5.5v.01M10 18v-5.2a3 3 0 0 1 6 0V18M10 10v8"></path></svg>LinkedIn</a>
+                <a href="https://github.com/mannuscripts" target="_blank" rel="noopener noreferrer" aria-label="GitHub de Emannuely Vanuzia"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M9 19c-4 1.2-4-2-5.5-2M14.5 21v-3.1a2.7 2.7 0 0 0-.8-2.1c2.6-.3 5.3-1.3 5.3-5.7a4.5 4.5 0 0 0-1.2-3.1A4.2 4.2 0 0 0 17.7 4S16.6 3.6 14.5 5a11.5 11.5 0 0 0-5 0C8.4 3.6 7.3 4 7.3 4a4.2 4.2 0 0 0-.1 3A4.5 4.5 0 0 0 6 10.1c0 4.4 2.7 5.4 5.3 5.7a2.7 2.7 0 0 0-.8 2.1V21"></path></svg>GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="setor-team-card">
+            <span class="setor-team-number">02</span>
+            <img class="setor-team-photo" src="./images/carlos-henrique.jpg" alt="Foto de Carlos Henrique Costa" width="96" height="96" />
+            <div class="setor-team-content">
+              <h3>Carlos Henrique Costa</h3>
+              <p class="setor-team-role">Integrante do grupo</p>
+              <p class="membro-desc">Graduando em Sistemas de Informação, UEMG Unidade Carangola.</p>
+              <p class="setor-team-location">
+                <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 21s7-6.1 7-12a7 7 0 1 0-14 0c0 5.9 7 12 7 12Z"></path><circle cx="12" cy="9" r="2.25"></circle></svg>
+                Caparaó/MG
+              </p>
+              <div class="setor-team-divider" aria-hidden="true"></div>
+              <div class="setor-team-links">
+                <a href="https://www.linkedin.com/in/carlos-henrique-souza-costa-" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Carlos Henrique Costa"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6 8.5V18M6 5.5v.01M10 18v-5.2a3 3 0 0 1 6 0V18M10 10v8"></path></svg>LinkedIn</a>
+                <a href="https://github.com/carloscosta7dev" target="_blank" rel="noopener noreferrer" aria-label="GitHub de Carlos Henrique Costa"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M9 19c-4 1.2-4-2-5.5-2M14.5 21v-3.1a2.7 2.7 0 0 0-.8-2.1c2.6-.3 5.3-1.3 5.3-5.7a4.5 4.5 0 0 0-1.2-3.1A4.2 4.2 0 0 0 17.7 4S16.6 3.6 14.5 5a11.5 11.5 0 0 0-5 0C8.4 3.6 7.3 4 7.3 4a4.2 4.2 0 0 0-.1 3A4.5 4.5 0 0 0 6 10.1c0 4.4 2.7 5.4 5.3 5.7a2.7 2.7 0 0 0-.8 2.1V21"></path></svg>GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="setor-team-card">
+            <span class="setor-team-number">03</span>
+            <img class="setor-team-photo" src="./images/lavinya-sannliver.jpg" alt="Foto de Lavinya Sannliver" width="96" height="96" />
+            <div class="setor-team-content">
+              <h3>Lavinya Sannliver</h3>
+              <p class="setor-team-role">Integrante do grupo</p>
+              <p class="membro-desc">Graduando em Sistemas de Informação, UEMG Unidade Carangola.</p>
+              <p class="setor-team-location">
+                <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 21s7-6.1 7-12a7 7 0 1 0-14 0c0 5.9 7 12 7 12Z"></path><circle cx="12" cy="9" r="2.25"></circle></svg>
+                Tombos/MG
+              </p>
+              <div class="setor-team-divider" aria-hidden="true"></div>
+              <div class="setor-team-links">
+                <a href="https://www.linkedin.com/in/lavinya-sannliver/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Lavinya Sannliver"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6 8.5V18M6 5.5v.01M10 18v-5.2a3 3 0 0 1 6 0V18M10 10v8"></path></svg>LinkedIn</a>
+                <a href="https://github.com/lavinyasannliver" target="_blank" rel="noopener noreferrer" aria-label="GitHub de Lavinya Sannliver"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M9 19c-4 1.2-4-2-5.5-2M14.5 21v-3.1a2.7 2.7 0 0 0-.8-2.1c2.6-.3 5.3-1.3 5.3-5.7a4.5 4.5 0 0 0-1.2-3.1A4.2 4.2 0 0 0 17.7 4S16.6 3.6 14.5 5a11.5 11.5 0 0 0-5 0C8.4 3.6 7.3 4 7.3 4a4.2 4.2 0 0 0-.1 3A4.5 4.5 0 0 0 6 10.1c0 4.4 2.7 5.4 5.3 5.7a2.7 2.7 0 0 0-.8 2.1V21"></path></svg>GitHub</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
 
     </div>
   </main>

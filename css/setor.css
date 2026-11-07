@@ -1,8 +1,8 @@
 /* ==========================================================================
    ESTILOS LIVRES DO SETOR — DESENVOLVIDO PELA EQUIPE DISCENTE
-   Disciplina: Programação 2 (Extensão BSI / UEMG Carangola)
+   Setor 03: Estágios & Convênios — InfoHub UEMG Carangola
    
-   DICA: Você pode e deve utilizar as variáveis declaradas no base-uemg.css:
+   Reaproveita as variáveis nativas do css/base-uemg.css:
    - Cores: var(--color-primary), var(--color-accent-amber), var(--color-surface), etc.
    - Espaçamentos: var(--spacing-sm), var(--spacing-md), var(--spacing-lg), etc.
    - Bordas e Sombras: var(--radius-md), var(--radius-lg), var(--shadow-card), etc.
@@ -38,11 +38,128 @@
 .setor-section-desc {
   font-size: var(--font-size-sm);
   color: var(--color-text-muted);
-  max-width: 680px;
+  max-width: 760px;
   margin-top: var(--spacing-xs);
 }
 
-/* Grid de Conteúdo do Setor (Exemplo: 2 ou 3 colunas) */
+/* Badge de Indicação de Melhoria da Equipe Dev */
+.setor-dev-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: var(--color-badge-amber-bg);
+  color: var(--color-badge-amber-text);
+  border: 1px solid rgba(180, 83, 9, 0.25);
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  margin-bottom: var(--spacing-xs);
+}
+
+/* Busca e Filtros Rápidos */
+.setor-search {
+  margin-bottom: var(--spacing-xl);
+  padding: var(--spacing-lg);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+}
+
+.setor-search label {
+  display: block;
+  margin-bottom: var(--spacing-xs);
+  color: var(--color-primary-dark);
+  font-weight: 700;
+}
+
+.setor-search-control {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.setor-search input {
+  width: 100%;
+  min-width: 0;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text-main);
+  font: inherit;
+  font-size: var(--font-size-sm);
+  background-color: #ffffff;
+}
+
+.setor-search input:focus-visible {
+  outline: 3px solid rgba(0, 77, 153, 0.25);
+  border-color: var(--color-border-focus);
+}
+
+.setor-filter-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+  margin-top: var(--spacing-md);
+}
+
+.setor-filter-tag {
+  background: #f1f5f9;
+  color: var(--color-text-muted);
+  border: 1px solid var(--color-border);
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.setor-filter-tag:hover {
+  background: #e2e8f0;
+  color: var(--color-primary-dark);
+}
+
+.setor-filter-tag.is-active {
+  background: var(--color-primary);
+  color: #ffffff;
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.setor-button {
+  border: 0;
+  border-radius: var(--radius-md);
+  padding: 0.75rem 1.25rem;
+  font: inherit;
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-xs);
+  transition: background-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.setor-button-secondary {
+  background: var(--color-primary);
+  color: var(--color-text-light);
+}
+
+.setor-button-secondary:hover {
+  background: var(--color-primary-light);
+}
+
+.setor-search-status {
+  min-height: 1.4em;
+  margin-top: var(--spacing-sm);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+}
+
+/* Grids e Cards */
 .setor-cards-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -52,30 +169,47 @@
 
 @media (min-width: 768px) {
   .setor-cards-grid {
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* Card de Conteúdo do Setor */
+@media (min-width: 1024px) {
+  .setor-cards-grid.three-cols {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 .setor-card {
   background-color: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   padding: var(--spacing-lg);
   box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
   transition: transform var(--transition-fast), box-shadow var(--transition-fast);
 }
 
 .setor-card:hover {
-  transform: translateY(-2px);
+  transform: translateY(-3px);
   box-shadow: var(--shadow-hover);
+}
+
+.setor-card-kicker {
+  margin-bottom: var(--spacing-xs);
+  color: var(--color-accent-amber);
+  font-size: var(--font-size-xs);
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
 .setor-card h3 {
   font-size: var(--font-size-md);
-  color: var(--color-primary);
+  color: var(--color-primary-dark);
   margin-bottom: var(--spacing-sm);
-  font-weight: 700;
+  font-weight: 800;
+  line-height: 1.3;
 }
 
 .setor-card p {
@@ -84,28 +218,742 @@
   line-height: 1.6;
 }
 
-/* Box de Destaque / Avisos */
-.setor-callout {
-  background-color: #f8fafc;
-  border-left: 4px solid var(--color-accent-amber);
-  padding: var(--spacing-md) var(--spacing-lg);
+.setor-card-alert {
+  margin-top: var(--spacing-md);
+  padding: var(--spacing-sm) var(--spacing-md);
+  background-color: #fff1f2;
+  border-left: 3px solid var(--color-accent);
   border-radius: var(--radius-sm);
+  font-size: var(--font-size-xs);
+  color: #9f1239;
+  font-weight: 600;
+}
+
+.setor-card-note {
+  margin-top: auto;
+  padding-top: var(--spacing-md);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  border-top: 1px dashed var(--color-border);
+}
+
+.setor-steps {
+  margin-top: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+  padding-left: 1.2rem;
+  color: var(--color-text-main);
+  font-size: var(--font-size-sm);
+}
+
+.setor-steps li {
+  margin-bottom: var(--spacing-xs);
+  line-height: 1.5;
+}
+
+.setor-link {
+  color: var(--color-primary-light);
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color var(--transition-fast);
+}
+
+.setor-link:hover {
+  color: var(--color-accent-amber);
+}
+
+/* Painel de Conteúdo e Recursos */
+.setor-panel {
+  margin: var(--spacing-2xl) 0;
+  padding: var(--spacing-xl);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+}
+
+.setor-section-header-compact {
+  margin-bottom: var(--spacing-lg);
+}
+
+.setor-resource-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-md);
+}
+
+@media (min-width: 640px) {
+  .setor-resource-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.setor-resource-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background-color: #ffffff;
+  text-decoration: none;
+  transition: background-color var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.setor-resource-card:hover,
+.setor-resource-card:focus-visible {
+  background-color: var(--color-surface-hover);
+  border-color: var(--color-primary-light);
+  transform: translateY(-2px);
+}
+
+.setor-resource-card strong {
+  color: var(--color-primary);
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.setor-resource-card span {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  line-height: 1.5;
+}
+
+/* Seção de FAQ com Accordion Nativo */
+.setor-faq-section {
+  margin: var(--spacing-2xl) 0;
+}
+
+.setor-faq-list {
+  display: grid;
+  gap: var(--spacing-sm);
+}
+
+.setor-faq-item {
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  transition: border-color var(--transition-fast);
+}
+
+.setor-faq-item[open] {
+  border-color: var(--color-primary-light);
+}
+
+.setor-faq-item summary {
+  color: var(--color-primary-dark);
+  cursor: pointer;
+  font-weight: 700;
+  font-size: var(--font-size-sm);
+  list-style-position: inside;
+  padding: var(--spacing-xs) 0;
+}
+
+.setor-faq-item summary:hover {
+  color: var(--color-primary-light);
+}
+
+.setor-faq-item p {
+  margin-top: var(--spacing-sm);
+  color: var(--color-text-main);
+  font-size: var(--font-size-sm);
+  line-height: 1.6;
+  padding-top: var(--spacing-xs);
+  border-top: 1px solid var(--color-border);
+}
+
+.setor-faq-item ul {
+  margin-top: var(--spacing-xs);
+  padding-left: 1.25rem;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-main);
+}
+
+/* Ferramentas Interativas (Melhorias Sugeridas) */
+.setor-tools-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-xl);
   margin-top: var(--spacing-lg);
 }
 
-.setor-callout h4 {
+@media (min-width: 900px) {
+  .setor-tools-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.setor-tool-box {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-card);
+}
+
+.setor-tool-box h3 {
+  font-size: var(--font-size-md);
   color: var(--color-primary-dark);
-  font-size: var(--font-size-sm);
+  margin-bottom: var(--spacing-xs);
+  font-weight: 800;
+}
+
+.setor-tool-box p.tool-desc {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  margin-bottom: var(--spacing-md);
+}
+
+/* Calculadora Form */
+.calc-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  margin-bottom: var(--spacing-md);
+}
+
+.calc-group label {
+  font-size: var(--font-size-xs);
   font-weight: 700;
+  color: var(--color-primary-dark);
+}
+
+.calc-select,
+.calc-input {
+  padding: 0.6rem 0.8rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  font: inherit;
+  color: var(--color-text-main);
+}
+
+.calc-result-box {
+  background-color: #f0f9ff;
+  border: 1px solid #bae6fd;
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
+  margin-top: var(--spacing-md);
+}
+
+.calc-result-box h4 {
+  font-size: var(--font-size-xs);
+  color: #0369a1;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+
   margin-bottom: 4px;
+}
+
+.calc-result-val {
+  font-size: var(--font-size-lg);
+  font-weight: 800;
+  color: var(--color-primary-dark);
+}
+
+/* Checklist Interativo */
+.checklist-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-md);
+}
+
+.checklist-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm) var(--spacing-md);
+  background-color: #f8fafc;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.checklist-item:hover {
+  background-color: #f1f5f9;
+}
+
+.checklist-item input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  cursor: pointer;
+  accent-color: var(--color-primary);
+}
+
+.checklist-item span {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-main);
+  line-height: 1.4;
+}
+
+.checklist-item.is-completed {
+  background-color: #f0fdf4;
+  border-color: #bbf7d0;
+}
+
+.checklist-item.is-completed span {
+  text-decoration: line-through;
+  color: #166534;
+}
+
+.checklist-progress-bar {
+  height: 8px;
+  width: 100%;
+  background-color: #e2e8f0;
+  border-radius: var(--radius-pill);
+  margin-top: var(--spacing-md);
+  overflow: hidden;
+}
+
+.checklist-progress-fill {
+  height: 100%;
+  width: 0%;
+  background-color: var(--color-accent-amber);
+  transition: width var(--transition-normal);
+}
+
+/* Card de Contatos Oficiais UEMG Carangola */
+.setor-contact-card {
+  background: linear-gradient(135deg, #002244 0%, #003366 100%);
+  color: #ffffff;
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  margin: var(--spacing-2xl) 0;
+  box-shadow: var(--shadow-card);
+}
+
+.setor-contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-lg);
+}
+
+@media (min-width: 768px) {
+  .setor-contact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.setor-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-md);
+}
+
+.setor-contact-icon {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #fbbf24;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.setor-contact-info h4 {
+  font-size: var(--font-size-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 2px;
+}
+
+.setor-contact-info p,
+.setor-contact-info a {
+  font-size: var(--font-size-sm);
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.setor-contact-info a:hover {
+  text-decoration: underline;
+  color: #fbbf24;
+}
+
+/* Apresentação da equipe */
+.setor-team-section {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 88px 24px 96px;
+  background: linear-gradient(180deg, rgba(244, 246, 249, 0.35), rgba(226, 232, 240, 0.42));
+}
+
+.setor-team-section .setor-section-header {
+  max-width: 680px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+.setor-team-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 12px;
+  color: var(--color-primary-light);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.setor-team-eyebrow::before,
+.setor-team-eyebrow::after {
+  width: 24px;
+  height: 1px;
+  background: rgba(0, 77, 153, 0.3);
+  content: "";
+}
+
+.setor-team-section .setor-section-title {
+  margin: 0;
+  font-size: clamp(1.5rem, 2.2vw, 1.875rem);
+  letter-spacing: -0.02em;
+}
+
+.setor-team-rule {
+  display: block;
+  width: 48px;
+  height: 3px;
+  margin: 16px auto 15px;
+  border-radius: var(--radius-pill);
+  background: var(--color-accent);
+}
+
+.setor-team-section .setor-section-desc {
+  max-width: 540px;
+  margin: 0 auto;
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.setor-team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.setor-team-card {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+  min-height: 430px;
+  padding: 32px 24px;
+  text-align: center;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.06), 0 8px 24px rgba(15, 23, 42, 0.06);
+  isolation: isolate;
+  transition: transform 250ms ease, box-shadow 250ms ease, border-color 250ms ease;
+}
+
+.setor-team-card::before {
+  position: absolute;
+  inset: 0 0 auto;
+  height: 3px;
+  content: "";
+  background: var(--color-accent);
+  z-index: -1;
+}
+
+.setor-team-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 8px rgba(15, 23, 42, 0.07), 0 14px 32px rgba(15, 23, 42, 0.1);
+  border-color: var(--color-primary-light);
+}
+
+.setor-team-number {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 24px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  background: var(--color-bg);
+  color: var(--color-primary-light);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.setor-team-photo {
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid var(--color-surface);
+  outline: 2px solid var(--color-badge-bg);
+  box-shadow: 0 6px 16px rgba(0, 34, 68, 0.12);
+}
+
+.setor-team-content {
+  min-width: 0;
+  width: 100%;
+  margin-top: var(--spacing-md);
+}
+
+.setor-team-content h3 {
+  color: var(--color-primary-dark);
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.setor-team-role {
+  margin-top: 2px;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+.membro-desc {
+  display: -webkit-box;
+  min-height: calc(3 * 1.55em);
+  margin: 12px 0 16px;
+  overflow: hidden;
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+  line-height: 1.55;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.setor-team-location {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+}
+
+.setor-team-location svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.setor-team-divider {
+  width: 100%;
+  height: 1px;
+  margin: 20px 0 16px;
+  background: var(--color-border);
+}
+
+.setor-team-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.setor-team-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 34px;
+  gap: 6px;
+  padding: 6px 12px;
+  border: 1px solid var(--color-primary-light);
+  border-radius: var(--radius-pill);
+  color: var(--color-primary-light);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 200ms ease, color 200ms ease;
+}
+
+.setor-team-links svg {
+  width: 15px;
+  height: 15px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.setor-team-links a:hover,
+.setor-team-links a:focus-visible {
+  background: var(--color-primary);
+  color: var(--color-text-light);
+}
+
+.setor-team-links a:focus-visible {
+  outline: 3px solid rgba(0, 77, 153, 0.3);
+  outline-offset: 3px;
+}
+
+/* Callout com Frase do Professor */
+.setor-callout {
+  background-color: #fffbeb;
+  border-left: 4px solid var(--color-accent-amber);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-md);
+  margin-top: var(--spacing-2xl);
+  box-shadow: var(--shadow-sm);
+}
+
+.setor-callout-quote {
+  font-size: var(--font-size-md);
+  font-weight: 800;
+  color: #92400e;
+  margin-bottom: var(--spacing-xs);
+  line-height: 1.3;
 }
 
 .setor-callout p {
   font-size: var(--font-size-sm);
-  color: var(--color-text-muted);
+  color: #78350f;
   margin: 0;
+  line-height: 1.5;
 }
 
-/* ==========================================================================
-   ADICIONE ABAIXO OS SEUS PRÓPRIOS ESTILOS ESPECÍFICOS PARA O SETOR:
-   ========================================================================== */
+.setor-searchable.is-hidden {
+  display: none !important;
+}
+
+/* Responsividade Fina */
+@media (max-width: 640px) {
+  .setor-main-section {
+    padding: var(--spacing-lg) 0;
+  }
+
+  .setor-section-title {
+    font-size: var(--font-size-lg);
+  }
+
+  .setor-search-control {
+    flex-direction: column;
+  }
+
+  .setor-button {
+    width: 100%;
+  }
+
+  .setor-panel,
+  .setor-contact-card,
+  .setor-tool-box {
+    padding: var(--spacing-md);
+  }
+
+  .setor-card {
+    padding: var(--spacing-md);
+  }
+
+  .setor-team-section {
+    padding: 72px 16px;
+  }
+
+  .setor-team-section .setor-section-header {
+    margin-bottom: 34px;
+  }
+
+  .setor-team-eyebrow {
+    gap: 8px;
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+  }
+
+  .setor-team-eyebrow::before,
+  .setor-team-eyebrow::after {
+    width: 16px;
+  }
+
+  .setor-team-section .setor-section-title {
+    font-size: 1.5rem;
+  }
+
+  .setor-team-section .setor-section-desc {
+    font-size: 0.9rem;
+  }
+
+  .setor-team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .setor-team-card {
+    width: 100%;
+    max-width: 420px;
+    min-height: 0;
+    margin: 0 auto;
+    padding: 24px 20px;
+  }
+
+  .setor-team-photo {
+    width: 88px;
+    height: 88px;
+  }
+
+  .membro-desc {
+    display: block;
+    min-height: 0;
+    overflow: visible;
+  }
+
+  .setor-team-links a {
+    min-height: 44px;
+    padding: 8px 14px;
+  }
+
+  .setor-filter-tags {
+    gap: 6px;
+  }
+
+  .setor-filter-tag {
+    font-size: 0.7rem;
+    padding: 4px 10px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 900px) {
+  .setor-team-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (hover: none) {
+  .setor-team-card:hover {
+    transform: none;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.06), 0 8px 24px rgba(15, 23, 42, 0.06);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .setor-card,
+  .setor-resource-card,
+  .setor-filter-tag,
+  .setor-button {
+    transition: none;
+  }
+}
